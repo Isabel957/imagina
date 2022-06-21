@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
 
+@font-face {
+    font-family: "Cardo";
+    src: url("../fonts/Cardo/Cardo-Regular.ttf");
+}
+
+@font-face {
+    font-family: "CardoBold";
+    src: url("../fonts/Cardo/Cardo-Bold.ttf");
+}
+
+@font-face {
+    font-family: "CardoItalic";
+    src: url("../fonts/Cardo/Cardo-Italic.ttf");
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -96,6 +111,339 @@ a {
 }
 .card-big p{
     line-height: 25px;
+}
+
+.header{
+    font-family: "Cardo";
+    background: white;
+    
+}
+
+.desktop-header{
+    display: flex;
+    width: 100%;
+    background: white;
+    justify-content: center;
+    position :fixed;
+    z-index: 1;
+    padding: 20px 3rem;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .2);
+    align-items: center;
+    
+}
+.header ul{
+    display: flex;
+}
+.header li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.header a{
+    color : black;
+    text-decoration: none;
+    font-size: 18px;
+    margin : 0px;
+}
+.header .main-title{
+    font-family: "CardoBold";
+    font-size: 45px;
+}
+
+.header .socials li{
+    padding : 10px;
+}
+.header .socials li img{
+    width: 30px;
+}
+.header .center{
+    margin-left: -30px;
+}
+.header .center li{
+    padding :10px;
+}
+.header .title div{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header .title .second-title{
+    font-size: 12px;
+}
+
+.header .desktop-header .rigth button{
+    background: white;
+    border: none;
+    position: relative;
+    cursor: pointer;
+}
+.header .desktop-header .rigth button span{
+    position : absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    white-space : nowrap;
+    font-size: 15px;
+}
+.content{
+    padding-top : 150px;
+}
+
+.banner{
+    position: relative;
+    padding : 0px 20px;
+    text-align: center;
+}
+.banner p{
+    font-family: "CardoItalic";
+    color : white;
+    position : absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    white-space : nowrap;
+    font-size: 45px;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.contact {
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 900px;
+    font-family: "Cardo";
+}
+
+.contact-content{
+    display: flex;
+    text-align: justify;
+    font-size: 21px;
+    flex-wrap: wrap;
+    
+  
+}
+
+.contact-content .contact-space{
+    width: 50%;
+    padding: 2rem;
+    
+}
+.map{
+    margin-top: 1rem;
+}
+
+.footer{
+    background: #eeeeee;
+    padding : 3rem 1rem 1rem 1rem;
+    font-family: "Cardo";
+}
+
+.footer-top{
+    text-align: center;
+    padding-left: 2rem;
+}
+
+.footer-socials {
+    padding : 2rem 3rem 0rem 3rem;
+    text-align: center;
+}
+.footer-socials ul{
+    display: flex;
+    justify-content: center;
+}
+.footer-socials li{
+    list-style: none;
+    padding : 1rem;
+}
+.footer-socials li img{
+    width: 30px;
+}
+.footer-copyright{
+    padding: 2rem;
+    font-size: 20px;
+    border-top: 1px solid #888;
+}
+
+
+
+/* Responsive */
+
+.mobile-header {
+    display: none;
+    height: 74px;
+    width: 100vw;
+    background-color: #fff;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    position: fixed;
+    z-index: 10;
+    transition: all 0.3s;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .2);
+    top: 0;
+    left: 0;
+
+}
+.mobile-header.nav-visible div.toggle-nav .material-icons#openNavButton {
+    transform: scale(0) rotate(720deg);
+}
+.mobile-header.nav-visible div.toggle-nav .material-icons#closeNavButton {
+    transform: scale(1) rotate(0deg);
+}
+.mobile-header.nav-visible .nav {
+    left: 0;
+}
+.mobile-header.nav-visible .nav .item {
+    opacity: 1;
+}
+.mobile-header div.toggle-nav {
+    position: absolute;
+    height: 74px;
+    width: 74px;
+    padding: 0;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 0px;
+}
+.mobile-header div.toggle-nav .material-icons {
+    color: #212121;
+    font-size: 28px;
+    line-height: 72px;
+    cursor: pointer;
+    position: absolute;
+    transition: transform 0.3s;
+    width: 30px;
+}
+
+.mobile-header div.toggle-nav .material-icons img{
+    
+}
+
+.mobile-header div.toggle-nav .material-icons#openNavButton {
+    transform: scale(1) rotate(0deg);
+}
+.mobile-header div.toggle-nav .material-icons#closeNavButton {
+    transform: scale(0) rotate(720deg);
+}
+.mobile-header .nav {
+    margin: 0;
+    width: 100vw;
+    /* max-width: 500px; */
+    height: 100vh;
+    position: absolute;
+    top: 74px;
+    left: -100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: left 0.3s;
+    z-index: -1;
+    background-color: #fff;
+    padding: 80px 0 0 0;
+    box-sizing: border-box;
+}
+.mobile-header .nav .item {
+    position: relative;
+    text-align: center;
+    width: 90%;
+    transition: width 0.3s, margin 0.3s;
+    border-bottom: 1px solid #bdbdbd;
+    opacity: 0;
+    list-style-type: none;
+}
+.mobile-header .nav .item a {
+    color: #212121;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 52px;
+    width: 100%;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+.mobile-header .nav .item a:hover, .mobile-header .nav .item a:focus {
+    color: #d1d1d1;
+}
+.mobile-header .logo div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mobile-header .logo .main-title{
+    font-family: "CardoBold";
+    font-size: 30px;
+}
+.mobile-header .logo .second-title{
+    
+    font-size: 12px;
+}
+
+.header .btn-cotiza{
+    padding: 2rem 1rem;
+}
+.header .btn-cotiza button{
+    background: white;
+    border: none;
+    position: relative;
+    cursor: pointer;
+}
+.header .btn-cotiza button span{
+    position : absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    white-space : nowrap;
+    font-size: 16px;
+}
+
+.header .left{
+    position: absolute;
+    left: 3rem;
+}
+
+.header .rigth{
+    position: absolute;
+    right: 3rem;
+}
+
+
+.mobile-header .socials li{
+    padding : 20px;
+}
+
+.mobile-header .socials li img{
+    width: 40px;
+}
+
+@media (max-width: 900px) {
+    .desktop-header{
+        display: none;
+    }
+    .mobile-header{
+        display: flex;
+    }
+    
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-content .contact-space{
+        width: 100%;
+    }
+
+    .banner p{
+        white-space: normal;
+        font-size: 20px;
+    }
 }
 .cards-small {
     display: flex;

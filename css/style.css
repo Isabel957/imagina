@@ -24,8 +24,10 @@ body {
     font-family: 'Joan', serif;
 }
 .grad{
-    height: 512px;
     background-color: rgba(241,241,242,255);
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
 }
 h2 {
     font-size: 3.5rem;
@@ -490,8 +492,16 @@ a {
       flex-direction: column;
       height: 100%;
     }
+    .card-big-nosotros{
+        width: 100%;
+      flex-direction:row;
+      height: 100%;
+    }
     .card-big .text-card {
         width: 80%;
+    }
+    .card-big-nosotros .text-card-nosotros{
+        width: 100%;
     }
     .card-big .card-img {
         width: 80%;
@@ -510,6 +520,11 @@ a {
     }
     .card-big {
         width: 100%;
+    }
+    .card-big-nosotros{
+        width: 100%;
+        flex-direction: column;
+        width: auto;
     }
     .cards-small .card-small {
         width: 100%;

@@ -426,17 +426,15 @@ a {
 }
 
 @media (max-width: 900px) {
+    .content{
+        padding-top : 90px;
+    }
     .desktop-header{
         display: none;
     }
     .mobile-header{
         display: flex;
     }
-    
-}
-
-
-@media (max-width: 600px) {
 
     .contact-content .contact-space{
         width: 100%;
@@ -446,6 +444,13 @@ a {
         white-space: normal;
         font-size: 20px;
     }
+    
+}
+
+
+@media (max-width: 600px) {
+
+    
 }
 .cards-small {
     display: flex;
